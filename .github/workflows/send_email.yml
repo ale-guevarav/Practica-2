@@ -20,11 +20,11 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 465
+          secure: true
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: Cambios subidos a rama ${{ github.ref_name }}
-          to: ${{ secrets.EMAIL_TO }}
+          to: karen.guevara@iteso.mx, natalia.correa@iteso.mx
           from: GitHub Actions <${{ secrets.EMAIL_USERNAME }}>
-          content_type: text/plain
           body: |
             Se han subido cambios a la rama: ${{ github.ref_name }}
